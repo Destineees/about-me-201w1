@@ -13,34 +13,34 @@ let firstAnswer = prompt('Was I born in Seattle? (Y or N)').toUpperCase();
 
 if(firstAnswer === 'N' )
 {
-  alert('Correct! Great Job' + youserName);
+  alert('Correct! Great Job ' + youserName);
 }
 else
-  alert('Incorrect =[');
+  alert('Incorrect =[ ');
 
 let secondAnswer = prompt('Did I work as a Flight attendant? (Y or N)').toUpperCase();
 
 if(secondAnswer === 'Y' )
 {
-  alert('Correct! Great Job' + youserName);
+  alert('Correct! Great Job ' + youserName);
 }
 else
-  alert('Incorrect =[');
+  alert('Incorrect =[ ');
 
 let thirdAnswer = prompt('Do I have a real estate license? (Y or N)').toUpperCase();
 
 if(thirdAnswer === 'Y' )
 {
-  alert('Correct! Great Job' + youserName);
+  alert('Correct! Great Job ' + youserName);
 }
 else
-  alert('Incorrect =[');
+  alert('Incorrect =[ ');
 
 let fourthAnswer = prompt('Do I own property? (Y or N)').toUpperCase();
 
 if(fourthAnswer === 'N' )
 {
-  alert('Correct! Great Job' + youserName);
+  alert('Correct! Great Job ' + youserName);
 }
 else
   alert('Incorrect =[');
@@ -49,10 +49,10 @@ let fifthAnswer = prompt('Did I study in Arizona? (Y or N)').toUpperCase();
 
 if(fifthAnswer === 'Y' )
 {
-  alert('Correct! Great Job' + youserName);
+  alert('Correct! Great Job ' + youserName);
 }
 else
-  alert('Incorrect =[');
+  alert('Incorrect =[ ');
 
 //give final message include username in alert
 

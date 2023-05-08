@@ -27,17 +27,24 @@ body{
 .testSection{
   background-color: white;
   margin: 50px;
-  padding: 5%;
+  padding: 15%;
   color: black;
   text-align: center;
   font-size: 2vw;
   border: 3px solid burlywood;
 
 }
+div.show{
+  margin: 3px;
+  background-color: blanchedalmond;
+}
+div.show img{
+  width: 300px;
+  height: auto;
+  float:left;
+}
 footer{
   text-align: center;
   font-size: small;
-  border-radius: 33px;
-  border: 2px greenyellow solid;
   background-color: violet;
 }
