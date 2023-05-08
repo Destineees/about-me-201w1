@@ -12,4 +12,8 @@ Learn more about Destinee Sanders in this interactive about me guessing game.
 
 ### Lighthouse Accessibility Report Score
 
+![Lighthouse Report](img/lighth.png)
+
 ### Reflections and Comments
+
+I forgot to add the lighthouse report before submitting. This is fun anxious to add the next features on Lab 3. Hope I did all this right -_-
