@@ -44,8 +44,8 @@ div.show img{
   float:left;
 }
 footer{
-  color:aliceblue;
+  text-decoration: none;
   text-align: center;
   font-size: small;
-  background-color: rgb(71, 36, 71);
+  background-color: rgb(251, 249, 251);
 }
