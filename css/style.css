@@ -13,12 +13,12 @@ h1{
   background-color: rgb(255, 255, 255);
   border: 3px solid black;
   position: fixed;
-  bottom: 0;
+  top: 0;
   width: 100%;
   text-decoration: none;
 }
-li {
-  display: inline;
+.nav ul li {
+  display: list-item;
   padding-inline-start: 20px;
 }
 
@@ -30,19 +30,35 @@ body{
   margin: 50px;
   padding: 15%;
   color: black;
-  text-align: center;
   font-size: 2vw;
   border: 3px solid burlywood;
 
 }
+.testSection ul li{
+  list-style-type: square;
+  display:list-item;
+}
+.testSection ol li{
+  list-style-type: upper-roman;
+}
+p{
+ text-align: center;
+ font-size: large;
+ color:blueviolet;
+}
+h2{
+  text-align: center;
+  font-size: large;
+  color:blueviolet;
+ }
 div.show{
   margin: 3px;
-  background-color: blanchedalmond;
+  padding: 3px;
 }
 div.show img{
   width: 300px;
   height: auto;
-  float:left;
+  display: inline-block;
 }
 footer{
   text-decoration: none;
