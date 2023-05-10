@@ -59,50 +59,54 @@ if(fifthAnswer === 'Y' )
 else
   alert('Incorrect =[ ');
 
-let sixthAnswer = prompt('Guess a numer between 1-10. You have four times to guess.');
-let i = 0;
-do{
-  if (sixthAnswer < 5)
+let sixthAnswer = 0;
+sixthAnswer = prompt('Guess a numer between 1-10. You have four times to guess.');
+
+for (let i = 0; i <=3; i++)
+{
+  if (sixthAnswer === 5)
   {
-    alert('Too low!');
-    sixthAnswer = prompt('Guess a numer between 1-10.');}
+    alert('Correct!');
+    youserScore++;
+  }
   else if (sixthAnswer > 5)
   {
     alert('Too high!');
-    sixthAnswer = prompt('Guess a numer between 1-10.');}
-  else if(sixthAnswer === 5)
-  {
-    alert('Correct!');
-    youserScore++;}
-  else
-  {
     sixthAnswer = prompt('Guess a numer between 1-10.');
   }
-  i++;
-} while (i<=3 );
-{if (i === 3)
-  alert('Aww Man! It was Five!');}
+  else if(sixthAnswer < 5)
+  {
+    alert('Too Low!');
+    sixthAnswer = prompt('Guess a numer between 1-10.');
+  }
+}
+alert('It was Five!');
 
 
 let youserAnswer =[''];
 let seventhAnswer = [''];
 seventhAnswer.push('The Hobbit','Talking with Strangers','Effective Speaking','The Four Agreements','Mans Search for Meaning','What Happened to you?','The Alchemist','The Good Earth','Narrative of the Life of Frederick Douglass','All Gods Children Need Traveling Shoes');
 
-//youserAnswer [j] = prompt('This is the hardest to guess. Can you guess my top five books? Enter your choice from the following:'+ seventhAnswer);
-for(let j = 0;j<=6; j++)
+for(let j = 0; j<=6; j++)
 {
   youserAnswer [j] = prompt('This is the hardest to guess. Can you guess my top five books? Enter your choice from the following:'+ seventhAnswer);
+  let found = false;
 
-  if(seventhAnswer.includes (youserAnswer[j]))
+  for (let n = 0; n <= seventhAnswer.length; n++)
+  {
+    if(seventhAnswer[n] === youserAnswer[j])
+    {
+      found =true;
+    }
+  }
+  if(found)
   {
     youserScore + 1;
     alert('Correct!');
-    youserAnswer [j] = prompt('This is the hardest to guess. Can you guess my top five books? Enter your choice from the following:'+ seventhAnswer);
   }
   else
   {
     alert('Try again!');
-    youserAnswer[j] = prompt('This is the hardest to guess. Can you guess my top five books? Enter your choice from the following:'+ seventhAnswer);
   }
 }
 alert('My top five favorite books are' + seventhAnswer.slice(0,5));

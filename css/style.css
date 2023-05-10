@@ -9,6 +9,10 @@ h1{
   text-align: center;
   background-color: rgb(0, 66, 0);
 }
+.nav {
+  opacity: .3;
+  background-color: aliceblue;
+}
 .nav ul{
   background-color: rgb(255, 255, 255);
   border: 3px solid black;
@@ -27,12 +31,11 @@ body{
 }
 .testSection{
   background-color: white;
-  margin: 50px;
-  padding: 15%;
+  margin: 40px;
+  padding: 13%;
   color: black;
   font-size: 2vw;
   border: 3px solid burlywood;
-
 }
 .testSection ul li{
   list-style-type: square;
@@ -48,7 +51,6 @@ p{
 }
 h2{
   text-align: center;
-  font-size: large;
   color:blueviolet;
  }
 div.show{
@@ -56,13 +58,14 @@ div.show{
   padding: 3px;
 }
 div.show img{
-  width: 300px;
+  width: 50%;
   height: auto;
-  display: inline-block;
+  float:right;
+  padding-right: 5px;
 }
 footer{
   text-decoration: none;
   text-align: center;
-  font-size: small;
+  font-size: larger;
   background-color: rgb(251, 249, 251);
 }
