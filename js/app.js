@@ -92,7 +92,7 @@ for(let j = 0; j<=6; j++)
   youserAnswer [j] = prompt('This is the hardest to guess. Can you guess my top five books? Enter your choice from the following:'+ seventhAnswer);
   let found = false;
 
-  for (let n = 0; n <= seventhAnswer.length; n++)
+  for (let n = 0; n <= 6; n++)
   {
     if(seventhAnswer[n] === youserAnswer[j])
     {
