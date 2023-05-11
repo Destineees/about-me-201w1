@@ -68,6 +68,7 @@ for (let i = 0; i <=3; i++)
   {
     alert('Correct!');
     youserScore++;
+    break;
   }
   else if (sixthAnswer > 5)
   {
@@ -82,35 +83,36 @@ for (let i = 0; i <=3; i++)
 }
 alert('It was Five!');
 
-
-let youserAnswer =[''];
-let seventhAnswer = [''];
-seventhAnswer.push('The Hobbit','Talking with Strangers','Effective Speaking','The Four Agreements','Mans Search for Meaning','What Happened to you?','The Alchemist','The Good Earth','Narrative of the Life of Frederick Douglass','All Gods Children Need Traveling Shoes');
-
-for(let j = 0; j<=6; j++)
+function bookGuess()
 {
-  youserAnswer [j] = prompt('This is the hardest to guess. Can you guess my top five books? Enter your choice from the following:'+ seventhAnswer);
-  let found = false;
+  let youserAnswer =[''];
+  let seventhAnswer = [''];
+  seventhAnswer.push('The Hobbit','Talking with Strangers','Effective Speaking','The Four Agreements','Mans Search for Meaning','What Happened to you?','The Alchemist','The Good Earth','Narrative of the Life of Frederick Douglass','All Gods Children Need Traveling Shoes');
 
-  for (let n = 0; n <= 6; n++)
+  for(let j = 0; j<=6; j++)
   {
-    if(seventhAnswer[n] === youserAnswer[j])
+    youserAnswer [j] = prompt('This is the hardest to guess. Can you guess my top five books? Enter your choice from the following:'+ seventhAnswer);
+    let found = false;
+
+    for (let n = 0; n <= 6; n++)
     {
-      found =true;
+      if(seventhAnswer[n] === youserAnswer[j])
+      {
+        found =true;
+      }
+    }
+    if(found)
+    {
+      youserScore + 1;
+      alert('Correct!');
+    }
+    else
+    {
+      alert('Try again!');
     }
   }
-  if(found)
-  {
-    youserScore + 1;
-    alert('Correct!');
-  }
-  else
-  {
-    alert('Try again!');
-  }
+  alert('My top five favorite books are' + seventhAnswer.slice(0,5));
 }
-alert('My top five favorite books are' + seventhAnswer.slice(0,5));
-
 //give final message include username in alert
-
+bookGuess();
 alert('This has been so much fun! Until next time, Thanks for playing ' + youserName + 'Your final score:' + youserScore + ' out of 7');
