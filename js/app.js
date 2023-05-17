@@ -98,7 +98,7 @@ function bookGuess()
 
   while (j > 0)
   {
-    const userAnswer = prompt('Can you guess my top five favorite books? You have 7 tries. Please enter your first guess:').toUpperCase();
+    const userAnswer = prompt('Can you guess five of my ten favorite books? You have 7 attempts. Please enter your guess:').toUpperCase();
     let found = false;
     for (let i = 0; i < seventhAnswer.length; i++)
     {
