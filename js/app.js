@@ -1,12 +1,12 @@
 'use strict';
-
+let youserScore = 0;
 // Get username via propmpt and alert greeting to user
 
 let youserName = prompt('Hello I am Destinee, What is your Name?');
 
 alert('Welcome to the About Destinee Guessing Game... Let the games begin ' + youserName);
 
-let youserScore = 0;
+
 // Prompt user with 5 yes/no questions and alert incorrect or correct
 
 let firstAnswer = prompt('Was I born in Seattle? (Y or N)').toUpperCase();
@@ -59,59 +59,67 @@ if(fifthAnswer === 'Y' )
 else
   alert('Incorrect =[ ');
 
-let sixthAnswer = 0;
-sixthAnswer = prompt('Guess a numer between 1-10. You have four times to guess.');
+let rando = 5;
 
-for (let i = 0; i <=3; i++)
+for (let n=0; n<=3; n++)
 {
-  if (sixthAnswer === 5)
+  let sixthAnswer = Number(prompt('Guess a numer between 0-10. You have four times to guess.'));
+
+  if (sixthAnswer === rando)
   {
-    alert('Correct!');
     youserScore++;
+    alert('Correct!');
     break;
   }
-  else if (sixthAnswer > 5)
+  else if (sixthAnswer > rando)
   {
     alert('Too high!');
-    sixthAnswer = prompt('Guess a numer between 1-10.');
   }
-  else if(sixthAnswer < 5)
+  else if(sixthAnswer < rando)
   {
     alert('Too Low!');
-    sixthAnswer = prompt('Guess a numer between 1-10.');
+  }
+  else{
+    alert('Numbers only!');
   }
 }
+
 alert('It was Five!');
 
 function bookGuess()
 {
-  let youserAnswer =[''];
-  let seventhAnswer = [''];
-  seventhAnswer.push('The Hobbit','Talking with Strangers','Effective Speaking','The Four Agreements','Mans Search for Meaning','What Happened to you?','The Alchemist','The Good Earth','Narrative of the Life of Frederick Douglass','All Gods Children Need Traveling Shoes');
+  let j = 7;
+  const seventhAnswer = ['The Hobbit',
+    'Talking with Strangers',
+    'Effective Speaking',
+    'The Four Agreements',
+    'Mans Search for Meaning',
+    'What Happened to you?'];
 
-  for(let j = 0; j<=6; j++)
+  while (j > 0)
   {
-    youserAnswer [j] = prompt('This is the hardest to guess. Can you guess my top five books? Enter your choice from the following:'+ seventhAnswer);
+    const userAnswer = prompt('Can you guess my top five favorite books? You have 7 tries. Please enter your first guess:').toUpperCase();
     let found = false;
-
-    for (let n = 0; n <= 6; n++)
+    for (let i = 0; i < seventhAnswer.length; i++)
     {
-      if(seventhAnswer[n] === youserAnswer[j])
+      if (seventhAnswer[i].toUpperCase() === userAnswer)
       {
-        found =true;
+        alert('Correct!');
+        found = true;
+        break;
       }
     }
-    if(found)
+    if (found)
     {
-      youserScore + 1;
-      alert('Correct!');
+      youserScore += 1;
     }
     else
     {
-      alert('Try again!');
+      alert('Try again');
     }
+    j -= 1;
   }
-  alert('My top five favorite books are' + seventhAnswer.slice(0,5));
+  alert('My top five favorite books are ' + seventhAnswer.slice(0, 4).join(', '));
 }
 //give final message include username in alert
 bookGuess();
