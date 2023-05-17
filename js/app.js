@@ -123,4 +123,4 @@ function bookGuess()
 }
 //give final message include username in alert
 bookGuess();
-alert('This has been so much fun! Until next time, Thanks for playing ' + youserName + 'Your final score:' + youserScore + ' out of 7');
+alert('This has been so much fun! Until next time, Thanks for playing ' + youserName + 'Your final score:' + youserScore);
