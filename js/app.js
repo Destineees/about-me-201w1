@@ -8,84 +8,88 @@ alert('Welcome to the About Destinee Guessing Game... Let the games begin ' + yo
 
 
 // Prompt user with 5 yes/no questions and alert incorrect or correct
-
-let firstAnswer = prompt('Was I born in Seattle? (Y or N)').toUpperCase();
-
-if(firstAnswer === 'N' )
+function firstFiveQuestions()
 {
-  youserScore++;
-  alert('Correct! Great Job ' + youserName);
-}
-else
-  alert('Incorrect =[ ');
+  let firstAnswer = prompt('Was I born in Seattle? (Y or N)').toUpperCase();
 
-let secondAnswer = prompt('Did I work as a Flight attendant? (Y or N)').toUpperCase();
-
-if(secondAnswer === 'Y' )
-{
-  youserScore++;
-  alert('Correct! Great Job ' + youserName);
-}
-else
-  alert('Incorrect =[ ');
-
-let thirdAnswer = prompt('Do I have a real estate license? (Y or N)').toUpperCase();
-
-if(thirdAnswer === 'Y' )
-{
-  youserScore++;
-  alert('Correct! Great Job ' + youserName);
-}
-else
-  alert('Incorrect =[ ');
-
-let fourthAnswer = prompt('Do I own property? (Y or N)').toUpperCase();
-
-if(fourthAnswer === 'N' )
-{
-  youserScore++;
-  alert('Correct! Great Job ' + youserName);
-}
-else
-  alert('Incorrect =[');
-
-let fifthAnswer = prompt('Did I study in Arizona? (Y or N)').toUpperCase();
-
-if(fifthAnswer === 'Y' )
-{
-  youserScore++;
-  alert('Correct! Great Job ' + youserName);
-}
-else
-  alert('Incorrect =[ ');
-
-let rando = 5;
-
-for (let n=0; n<=3; n++)
-{
-  let sixthAnswer = Number(prompt('Guess a numer between 0-10. You have four times to guess.'));
-
-  if (sixthAnswer === rando)
+  if(firstAnswer === 'N' )
   {
     youserScore++;
-    alert('Correct!');
-    break;
+    alert('Correct! Great Job ' + youserName);
   }
-  else if (sixthAnswer > rando)
+  else
+    alert('Incorrect =[ ');
+
+  let secondAnswer = prompt('Did I work as a Flight attendant? (Y or N)').toUpperCase();
+
+  if(secondAnswer === 'Y' )
   {
-    alert('Too high!');
+    youserScore++;
+    alert('Correct! Great Job ' + youserName);
   }
-  else if(sixthAnswer < rando)
+  else
+    alert('Incorrect =[ ');
+
+  let thirdAnswer = prompt('Do I have a real estate license? (Y or N)').toUpperCase();
+
+  if(thirdAnswer === 'Y' )
   {
-    alert('Too Low!');
+    youserScore++;
+    alert('Correct! Great Job ' + youserName);
   }
-  else{
-    alert('Numbers only!');
+  else
+    alert('Incorrect =[ ');
+
+  let fourthAnswer = prompt('Do I own property? (Y or N)').toUpperCase();
+
+  if(fourthAnswer === 'N' )
+  {
+    youserScore++;
+    alert('Correct! Great Job ' + youserName);
   }
+  else
+    alert('Incorrect =[');
+
+  let fifthAnswer = prompt('Did I study in Arizona? (Y or N)').toUpperCase();
+
+  if(fifthAnswer === 'Y' )
+  {
+    youserScore++;
+    alert('Correct! Great Job ' + youserName);
+  }
+  else
+    alert('Incorrect =[ ');
 }
+firstFiveQuestions();
+function guessFive()
+{let rando = 5;
 
-alert('It was Five!');
+  for (let n=0; n<=3; n++)
+  {
+    let sixthAnswer = Number(prompt('Guess a numer between 0-10. You have four times to guess.'));
 
+    if (sixthAnswer === rando)
+    {
+      youserScore++;
+      alert('Correct!');
+      break;
+    }
+    else if (sixthAnswer > rando)
+    {
+      alert('Too high!');
+    }
+    else if(sixthAnswer < rando)
+    {
+      alert('Too Low!');
+    }
+    else{
+      alert('Numbers only!');
+    }
+  }
+
+  alert('It was Five!');
+}
+guessFive();
 function bookGuess()
 {
   let j = 7;
@@ -121,6 +125,5 @@ function bookGuess()
   }
   alert('My top five favorite books are ' + seventhAnswer.slice(0, 4).join(', '));
 }
-//give final message include username in alert
 bookGuess();
 alert('This has been so much fun! Until next time, Thanks for playing ' + youserName + 'Your final score:' + youserScore);
