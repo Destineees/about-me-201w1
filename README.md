@@ -12,7 +12,7 @@ Learn more about Destinee Sanders in this interactive about me guessing game.
 
 ### Lighthouse Accessibility Report Score
 
-![Lighthouse Report](img/lighth.png)
+![Lighthouse Report](img/Lighthouserep.png)
 
 ### Reflections and Comments
 
