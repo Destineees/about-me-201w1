@@ -102,7 +102,7 @@ function bookGuess()
 
   while (j > 0)
   {
-    const userAnswer = prompt('Can you guess five of my ten favorite books? You have 7 attempts. Please enter your guess:').toUpperCase();
+    const userAnswer = prompt('Can you guess one of my ten favorite books? You have 7 attempts. Please enter your guess:').toUpperCase();
     let found = false;
     for (let i = 0; i < seventhAnswer.length; i++)
     {
@@ -110,12 +110,12 @@ function bookGuess()
       {
         alert('Correct!');
         found = true;
-        break;
       }
     }
     if (found)
     {
       youserScore += 1;
+      break;
     }
     else
     {
@@ -126,4 +126,4 @@ function bookGuess()
   alert('My top five favorite books are ' + seventhAnswer.slice(0, 4).join(', '));
 }
 bookGuess();
-alert('This has been so much fun! Until next time, Thanks for playing ' + youserName + 'Your final score:' + youserScore);
+alert('This has been so much fun! Until next time, Thanks for playing ' + youserName + ' Your final score: ' + youserScore);
